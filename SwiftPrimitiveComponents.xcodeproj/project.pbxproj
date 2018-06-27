@@ -10,6 +10,8 @@
 		30378347208B9F9300804213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378346208B9F9300804213 /* AppDelegate.swift */; };
 		30378349208B9F9400804213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30378348208B9F9400804213 /* Assets.xcassets */; };
 		3037834C208B9F9400804213 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3037834A208B9F9400804213 /* MainMenu.xib */; };
+		30378355208B9FD000804213 /* ControlledTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378354208B9FD000804213 /* ControlledTextView.swift */; };
+		30C203D320BDAC02007C3FE0 /* ControlledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		3037834B208B9F9400804213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3037834D208B9F9400804213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPrimitiveComponents.entitlements; sourceTree = "<group>"; };
+		30378354208B9FD000804213 /* ControlledTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextView.swift; sourceTree = "<group>"; };
+		30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				3037834A208B9F9400804213 /* MainMenu.xib */,
 				3037834D208B9F9400804213 /* Info.plist */,
 				3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */,
+				30378354208B9FD000804213 /* ControlledTextView.swift */,
+				30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */,
 			);
 			path = SwiftPrimitiveComponents;
 			sourceTree = "<group>";
@@ -70,6 +76,7 @@
 				3037833F208B9F9300804213 /* Sources */,
 				30378340208B9F9300804213 /* Frameworks */,
 				30378341208B9F9300804213 /* Resources */,
+				30C203CF20B8897A007C3FE0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,12 +132,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30C203CF20B8897A007C3FE0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3037833F208B9F9300804213 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C203D320BDAC02007C3FE0 /* ControlledTextField.swift in Sources */,
 				30378347208B9F9300804213 /* AppDelegate.swift in Sources */,
+				30378355208B9FD000804213 /* ControlledTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +293,10 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftPrimitiveComponents/SwiftPrimitiveComponents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SwiftPrimitiveComponents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -286,6 +315,10 @@
 				CODE_SIGN_ENTITLEMENTS = SwiftPrimitiveComponents/SwiftPrimitiveComponents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = SwiftPrimitiveComponents/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
