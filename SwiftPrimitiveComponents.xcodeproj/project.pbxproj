@@ -12,6 +12,7 @@
 		3037834C208B9F9400804213 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3037834A208B9F9400804213 /* MainMenu.xib */; };
 		30378355208B9FD000804213 /* ControlledTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30378354208B9FD000804213 /* ControlledTextView.swift */; };
 		30C203D320BDAC02007C3FE0 /* ControlledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */; };
+		6B49477020F6C0B8009B7CC1 /* ControlledCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B49476F20F6C0B8009B7CC1 /* ControlledCheckbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPrimitiveComponents.entitlements; sourceTree = "<group>"; };
 		30378354208B9FD000804213 /* ControlledTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextView.swift; sourceTree = "<group>"; };
 		30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextField.swift; sourceTree = "<group>"; };
+		6B49476F20F6C0B8009B7CC1 /* ControlledCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledCheckbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */,
 				30378354208B9FD000804213 /* ControlledTextView.swift */,
 				30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */,
+				6B49476F20F6C0B8009B7CC1 /* ControlledCheckbox.swift */,
 			);
 			path = SwiftPrimitiveComponents;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B49477020F6C0B8009B7CC1 /* ControlledCheckbox.swift in Sources */,
 				30C203D320BDAC02007C3FE0 /* ControlledTextField.swift in Sources */,
 				30378347208B9F9300804213 /* AppDelegate.swift in Sources */,
 				30378355208B9FD000804213 /* ControlledTextView.swift in Sources */,

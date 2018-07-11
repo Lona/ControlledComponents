@@ -49,6 +49,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     view.addSubview(textInput)
 
+    let checkbox = ControlledCheckbox(frame: NSRect.init(x: 0, y: 250, width: 50, height: 50))
+    checkbox.onChange = { value in
+        checkbox.value = value
+    }
+    view.addSubview(checkbox)
+
     // Present the view in Playground
     window.contentView = view
   }
