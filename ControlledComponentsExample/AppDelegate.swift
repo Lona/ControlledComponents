@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     view.borderType = .noBorder
     view.contentViewMargins = .zero
 
+    textInput.textValue = "ok"
     textInput.onChangeText = { value in
       if self.textInput.textValue == "hello" { return }
       Swift.print("Value changed", value)

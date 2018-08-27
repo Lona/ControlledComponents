@@ -16,12 +16,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30378343208B9F9300804213 /* SwiftPrimitiveComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPrimitiveComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30378343208B9F9300804213 /* SwiftControlledComponentsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftControlledComponentsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30378346208B9F9300804213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30378348208B9F9400804213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3037834B208B9F9400804213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3037834D208B9F9400804213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPrimitiveComponents.entitlements; sourceTree = "<group>"; };
+		3037834E208B9F9400804213 /* ControlledComponentsExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ControlledComponentsExample.entitlements; sourceTree = "<group>"; };
 		30378354208B9FD000804213 /* ControlledTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextView.swift; sourceTree = "<group>"; };
 		30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledTextField.swift; sourceTree = "<group>"; };
 		6B49476F20F6C0B8009B7CC1 /* ControlledCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledCheckbox.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		3037833A208B9F9300804213 = {
 			isa = PBXGroup;
 			children = (
-				30378345208B9F9300804213 /* SwiftPrimitiveComponents */,
+				30378345208B9F9300804213 /* ControlledComponentsExample */,
 				30378344208B9F9300804213 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,32 +49,32 @@
 		30378344208B9F9300804213 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30378343208B9F9300804213 /* SwiftPrimitiveComponents.app */,
+				30378343208B9F9300804213 /* SwiftControlledComponentsExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		30378345208B9F9300804213 /* SwiftPrimitiveComponents */ = {
+		30378345208B9F9300804213 /* ControlledComponentsExample */ = {
 			isa = PBXGroup;
 			children = (
 				30378346208B9F9300804213 /* AppDelegate.swift */,
 				30378348208B9F9400804213 /* Assets.xcassets */,
 				3037834A208B9F9400804213 /* MainMenu.xib */,
 				3037834D208B9F9400804213 /* Info.plist */,
-				3037834E208B9F9400804213 /* SwiftPrimitiveComponents.entitlements */,
+				3037834E208B9F9400804213 /* ControlledComponentsExample.entitlements */,
 				30378354208B9FD000804213 /* ControlledTextView.swift */,
 				30C203D220BDAC02007C3FE0 /* ControlledTextField.swift */,
 				6B49476F20F6C0B8009B7CC1 /* ControlledCheckbox.swift */,
 			);
-			path = SwiftPrimitiveComponents;
+			path = ControlledComponentsExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30378342208B9F9300804213 /* SwiftPrimitiveComponents */ = {
+		30378342208B9F9300804213 /* SwiftControlledComponentsExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30378351208B9F9400804213 /* Build configuration list for PBXNativeTarget "SwiftPrimitiveComponents" */;
+			buildConfigurationList = 30378351208B9F9400804213 /* Build configuration list for PBXNativeTarget "SwiftControlledComponentsExample" */;
 			buildPhases = (
 				3037833F208B9F9300804213 /* Sources */,
 				30378340208B9F9300804213 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftPrimitiveComponents;
+			name = SwiftControlledComponentsExample;
 			productName = SwiftPrimitiveComponents;
-			productReference = 30378343208B9F9300804213 /* SwiftPrimitiveComponents.app */;
+			productReference = 30378343208B9F9300804213 /* SwiftControlledComponentsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3037833E208B9F9300804213 /* Build configuration list for PBXProject "SwiftPrimitiveComponents" */;
+			buildConfigurationList = 3037833E208B9F9300804213 /* Build configuration list for PBXProject "ControlledComponentsExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30378342208B9F9300804213 /* SwiftPrimitiveComponents */,
+				30378342208B9F9300804213 /* SwiftControlledComponentsExample */,
 			);
 		};
 /* End PBXProject section */
@@ -294,19 +294,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftPrimitiveComponents/SwiftPrimitiveComponents.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ControlledComponentsExample/ControlledComponentsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = SwiftPrimitiveComponents/Info.plist;
+				INFOPLIST_FILE = ControlledComponentsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devinabbott.SwiftPrimitiveComponents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devinabbott.ControlledComponentsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -316,19 +316,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftPrimitiveComponents/SwiftPrimitiveComponents.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ControlledComponentsExample/ControlledComponentsExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = SwiftPrimitiveComponents/Info.plist;
+				INFOPLIST_FILE = ControlledComponentsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devinabbott.SwiftPrimitiveComponents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devinabbott.ControlledComponentsExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -337,7 +337,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3037833E208B9F9300804213 /* Build configuration list for PBXProject "SwiftPrimitiveComponents" */ = {
+		3037833E208B9F9300804213 /* Build configuration list for PBXProject "ControlledComponentsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3037834F208B9F9400804213 /* Debug */,
@@ -346,7 +346,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30378351208B9F9400804213 /* Build configuration list for PBXNativeTarget "SwiftPrimitiveComponents" */ = {
+		30378351208B9F9400804213 /* Build configuration list for PBXNativeTarget "SwiftControlledComponentsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30378352208B9F9400804213 /* Debug */,
