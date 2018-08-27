@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ControlledComponents
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,8 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     textInput.textValue = "foo"
   }
 
-  let textInput = ControlledTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
-
+  let textInput = TextField(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
@@ -50,8 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     view.addSubview(textInput)
 
-    let checkbox = ControlledCheckbox(frame: NSRect.init(x: 0, y: 250, width: 50, height: 50))
-    checkbox.onChange = { value in
+    let checkbox = Checkbox(frame: NSRect.init(x: 0, y: 250, width: 50, height: 50))
+    checkbox.onChangeValue = { value in
         checkbox.value = value
     }
     view.addSubview(checkbox)
