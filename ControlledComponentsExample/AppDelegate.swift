@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftPrimitiveComponents
+//  ControlledComponentsExample
 //
-//  Created by devin_abbott on 4/21/18.
-//  Copyright © 2018 devin_abbott. All rights reserved.
+//  Created by Devin Abbott on 8/27/18.
+//  Copyright © 2018 BitDisco, Inc. All rights reserved.
 //
 
 import Cocoa
@@ -12,53 +12,65 @@ import ControlledComponents
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-  @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var window: NSWindow!
 
-  @objc func handleButtonPress(_ sender: AnyObject) {
-    textInput.textValue = "foo"
-  }
+    let contentView = NSView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
 
-  let textInput = TextField(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
+    let textInput = TextField()
+    let button = Button()
+    let checkbox = Checkbox()
 
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-    // Insert code here to initialize your application
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        setUpViews()
+        setUpConstraints()
 
-    let view = NSBox(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
-
-    view.fillColor = .white
-    view.boxType = .custom
-    view.borderType = .noBorder
-    view.contentViewMargins = .zero
-
-    textInput.textValue = "ok"
-    textInput.onChangeText = { value in
-      if self.textInput.textValue == "hello" { return }
-      Swift.print("Value changed", value)
-      self.textInput.textValue = value
+        window.contentView = contentView
     }
 
+    func setUpViews() {
+        button.titleText = "Set to 'foo'"
+        checkbox.titleText = "Checkbox"
 
-//    let textInput = ControlledTextView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
-//    textInput.onChangeText = { value in
-//      Swift.print("Value changed", value)
-//      textInput.string = value
-//    }
+        contentView.addSubview(button)
+        contentView.addSubview(textInput)
+        contentView.addSubview(checkbox)
 
-    let button = NSButton(title: "Test", target: self, action: #selector(handleButtonPress(_:)))
-    view.addSubview(button)
-    button.frame = NSRect(x: 0, y: 200, width: 60, height: 26)
+        textInput.onChangeTextValue = { value in
+            if self.textInput.textValue == "hello" { return }
+            Swift.print("Value changed", value)
+            self.textInput.textValue = value
+        }
 
-    view.addSubview(textInput)
+        button.onPress = {
+            self.textInput.textValue = "foo"
+        }
 
-    let checkbox = Checkbox(frame: NSRect.init(x: 0, y: 250, width: 50, height: 50))
-    checkbox.onChangeValue = { value in
-        checkbox.value = value
+        checkbox.onChangeValue = { value in
+            self.checkbox.value = value
+        }
     }
-    view.addSubview(checkbox)
 
-    // Present the view in Playground
-    window.contentView = view
-  }
+    func setUpConstraints() {
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        textInput.translatesAutoresizingMaskIntoConstraints = false
+        checkbox.translatesAutoresizingMaskIntoConstraints = false
+
+        button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+        button.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+
+        button.trailingAnchor.constraint(equalTo: textInput.leadingAnchor, constant: -10).isActive = true
+
+        textInput.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
+        textInput.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        textInput.bottomAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
+
+        checkbox.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10).isActive = true
+
+        checkbox.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+        checkbox.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
+        checkbox.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
+    }
 
   func applicationWillTerminate(_ aNotification: Notification) {
     // Insert code here to tear down your application

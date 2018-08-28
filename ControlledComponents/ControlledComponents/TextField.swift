@@ -20,6 +20,10 @@ public class TextField: NSTextField, NSControlTextEditingDelegate {
 
     // MARK: Lifecycle
 
+    public convenience init() {
+        self.init(frame: .zero)
+    }
+
     override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
 
@@ -34,7 +38,7 @@ public class TextField: NSTextField, NSControlTextEditingDelegate {
 
     // MARK: Public
 
-    public var onChangeText: ((String) -> Void)?
+    public var onChangeTextValue: ((String) -> Void)?
 
     public var textValue: String = "" {
         didSet {
@@ -92,7 +96,7 @@ extension TextField: NSTextFieldDelegate {
         // Take a snapshot, since we want to make sure these values don't change by the time we re-assign them back
         let snapshotState = previousState
 
-        onChangeText?(stringValue)
+        onChangeTextValue?(stringValue)
 
         if !textDidChangeInCallback {
 

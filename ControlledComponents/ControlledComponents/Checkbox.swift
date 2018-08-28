@@ -15,17 +15,33 @@ public class Checkbox: NSButton {
 
     // MARK: Lifecycle
 
+    public convenience init(titleText: String = "") {
+        self.init(frame: .zero)
+
+        self.titleText = titleText
+    }
+
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+
+        setUpViews()
+        setUpConstraints()
+
+        update()
     }
 
     override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        setup()
+
+        setUpViews()
+        setUpConstraints()
+
+        update()
     }
 
     // MARK: Public
+
+    public var titleText: String = "" { didSet { update() } }
 
     public var onChangeValue: ((Bool) -> Void)?
 
@@ -34,13 +50,14 @@ public class Checkbox: NSButton {
         set { state = newValue ? .on : .off }
     }
 
+    public var usesIntrinsicHeight: Bool {
+        get { return heightConstraint?.isActive ?? false }
+        set { heightConstraint?.isActive = newValue }
+    }
+
     // MARK: Private
 
-    private func setup() {
-        setButtonType(.switch)
-        action = #selector(handleChange)
-        target = self
-    }
+    private var heightConstraint: NSLayoutConstraint?
 
     @objc private func handleChange() {
         let newValue = value
@@ -50,5 +67,22 @@ public class Checkbox: NSButton {
 
         // This view's owner should update the `value` if needed
         onChangeValue?(newValue)
+    }
+
+    private func setUpViews() {
+        setButtonType(.switch)
+        action = #selector(handleChange)
+        target = self
+    }
+
+    private func setUpConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        heightConstraint = heightAnchor.constraint(equalToConstant: intrinsicContentSize.height)
+        heightConstraint?.isActive = true
+    }
+
+    private func update() {
+        title = titleText
     }
 }
