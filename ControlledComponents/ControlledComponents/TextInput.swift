@@ -1,5 +1,5 @@
 //
-//  TextField.swift
+//  TextInput.swift
 //  ControlledComponents
 //
 //  Created by Devin Abbott on 8/27/18.
@@ -9,9 +9,9 @@
 import AppKit
 import Foundation
 
-// MARK: - TextField
+// MARK: - TextInput
 
-public class TextField: NSTextField, NSControlTextEditingDelegate {
+public class TextInput: NSTextField, NSControlTextEditingDelegate {
 
     private struct InternalState {
         var textValue: String
@@ -92,7 +92,7 @@ public class TextField: NSTextField, NSControlTextEditingDelegate {
 
 // MARK: - NSTextFieldDelegate
 
-extension TextField: NSTextFieldDelegate {
+extension TextInput: NSTextFieldDelegate {
     override public func textDidChange(_ notification: Notification) {
 
         // Take a snapshot, since we want to make sure these values don't change by the time we re-assign them back

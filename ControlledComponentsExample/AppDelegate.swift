@@ -16,9 +16,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let contentView = NSView(frame: NSRect(x: 0, y: 0, width: 200, height: 200))
 
-    let textInput = TextField()
+    let textInput = TextInput()
     let button = Button()
     let checkbox = Checkbox()
+
+    var lockInput = false
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setUpViews()
@@ -29,15 +31,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func setUpViews() {
         button.titleText = "Set to 'foo'"
-        checkbox.titleText = "Checkbox"
+        checkbox.titleText = "Lock input when the text is 'hello'"
 
         contentView.addSubview(button)
         contentView.addSubview(textInput)
         contentView.addSubview(checkbox)
 
         textInput.onChangeTextValue = { value in
-            if self.textInput.textValue == "hello" { return }
+            if self.lockInput && self.textInput.textValue == "hello" { return }
+
             Swift.print("Value changed", value)
+
             self.textInput.textValue = value
         }
 
@@ -47,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         checkbox.onChangeValue = { value in
             self.checkbox.value = value
+            self.lockInput = value
         }
     }
 
