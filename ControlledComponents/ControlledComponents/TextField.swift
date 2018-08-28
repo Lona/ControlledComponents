@@ -39,6 +39,8 @@ public class TextField: NSTextField, NSControlTextEditingDelegate {
     // MARK: Public
 
     public var onChangeTextValue: ((String) -> Void)?
+    public var onSubmit: (() -> Void)?
+    public var onPressEscape: (() -> Void)?
 
     public var textValue: String = "" {
         didSet {
@@ -106,5 +108,17 @@ extension TextField: NSTextFieldDelegate {
         }
 
         textDidChangeInCallback = false
+    }
+
+    public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+        if (commandSelector == #selector(NSResponder.insertNewline(_:))) {
+            onSubmit?()
+            return true
+        } else if (commandSelector == #selector(NSResponder.cancelOperation(_:))) {
+            onPressEscape?()
+            return true
+        }
+
+        return false
     }
 }
