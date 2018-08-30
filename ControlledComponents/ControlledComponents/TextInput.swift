@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - TextInput
 
-public class TextInput: NSTextField, NSControlTextEditingDelegate {
+open class TextInput: NSTextField, NSControlTextEditingDelegate {
 
     private struct InternalState {
         var textValue: String
@@ -93,7 +93,7 @@ public class TextInput: NSTextField, NSControlTextEditingDelegate {
 // MARK: - NSTextFieldDelegate
 
 extension TextInput: NSTextFieldDelegate {
-    override public func textDidChange(_ notification: Notification) {
+    override open func textDidChange(_ notification: Notification) {
 
         // Take a snapshot, since we want to make sure these values don't change by the time we re-assign them back
         let snapshotState = previousState

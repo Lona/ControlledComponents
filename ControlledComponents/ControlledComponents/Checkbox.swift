@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Checkbox
 
-public class Checkbox: NSButton {
+open class Checkbox: NSButton {
 
     // MARK: Lifecycle
 

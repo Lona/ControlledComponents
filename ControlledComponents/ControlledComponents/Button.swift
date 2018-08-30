@@ -11,7 +11,7 @@ import Foundation
 
 // MARK: - Button
 
-public class Button: NSButton {
+open class Button: NSButton {
 
     // MARK: Lifecycle
 
