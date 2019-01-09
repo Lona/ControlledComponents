@@ -98,6 +98,8 @@ extension TextInput: NSTextFieldDelegate {
         // Take a snapshot, since we want to make sure these values don't change by the time we re-assign them back
         let snapshotState = previousState
 
+        textDidChangeInCallback = false
+
         onChangeTextValue?(stringValue)
 
         if !textDidChangeInCallback {
