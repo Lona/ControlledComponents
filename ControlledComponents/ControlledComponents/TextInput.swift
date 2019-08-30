@@ -45,11 +45,11 @@ open class TextInput: NSTextField, NSControlTextEditingDelegate {
     public var textValue: String = "" {
         didSet {
             textDidChangeInCallback = true
+
             previousState.textValue = textValue
-
-            if oldValue == textValue { return }
-
-            stringValue = textValue
+            if currentState.textValue != textValue {
+                currentState.textValue = textValue
+            }
         }
     }
 
